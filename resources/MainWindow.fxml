@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainWindowPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindow">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="loadNewFileButton" mnemonicParsing="false" onAction="#loadNewFileAction" text="Load New File" />
+                  <MenuItem fx:id="loadAppendFileButton" mnemonicParsing="false" onAction="#loadAppendFileAction" text="Append From File" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="createReportButton" mnemonicParsing="false" onAction="#createReportAction" text="Create Report" />
+               </items>
+          </Menu>
+            <Menu fx:id="dataMenu" mnemonicParsing="false" text="Data">
+              <items>
+                <MenuItem fx:id="addButton" mnemonicParsing="false" onAction="#addAction" text="Add" />
+                  <MenuItem fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteAction" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="lowerBoundButton" mnemonicParsing="false" onAction="#lowerBoundAction" text="Lower Bound: 0" />
+                  <MenuItem fx:id="upperBoundButton" mnemonicParsing="false" onAction="#upperBoundAction" text="Upper Bound: 100" />
+              </items>
+            </Menu>
+            <Menu fx:id="displayMenu" mnemonicParsing="false" text="Display">
+              <items>
+                <MenuItem fx:id="analyzeButton" mnemonicParsing="false" onAction="#analyzeAction" text="Analyze Data" />
+                  <MenuItem fx:id="displayDataButton" mnemonicParsing="false" onAction="#displayDataAction" text="Display Data" />
+                  <MenuItem fx:id="displayGraphButton" mnemonicParsing="false" onAction="#displayGraphAction" text="Display Graph" />
+                  <MenuItem fx:id="displayDistributionButton" mnemonicParsing="false" onAction="#displayDistributionAction" text="Display Distribution" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="displayErrorLogButton" mnemonicParsing="false" onAction="#displayErrorLogAction" text="Display Error Log" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TextArea fx:id="textArea" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Monospaced Regular" size="15.0" />
+         </font></TextArea>
+   </center>
+</BorderPane>
